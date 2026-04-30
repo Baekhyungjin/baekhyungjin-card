@@ -857,7 +857,7 @@
         <div class="gallery-grid">
           <button class="gallery-item" type="button" data-full="https://i.imgur.com/BpWlzkP.jpg" data-title="오프라인 세미나"><img src="https://i.imgur.com/BpWlzkP.jpg" alt="오프라인 세미나" /><span class="gallery-caption">오프라인 세미나</span></button>
           <button class="gallery-item" type="button" data-full="https://i.imgur.com/1vUVbIE.jpg" data-title="목회자대회"><img src="https://i.imgur.com/1vUVbIE.jpg" alt="목회자대회" /><span class="gallery-caption">목회자대회</span></button>
-          <button class="gallery-item" type="button" data-full="https://i.imgur.com/nYYxcDH.jpg" data-title="교회관리앱 포트폴리오"><img src="https://i.imgur.com/nYYxcDH.jpg" alt="교회관리앱 포트폴리오" /><span class="gallery-caption">교회관리앱</span></button>
+          <a class="gallery-item" href="https://script.google.com/macros/s/AKfycbyzBrb3wEOGfWHes2VV_lAJT57I9tM5JaouTei6v3WBCbZ-eMv0DSDTWUJtJ3pr_5E/exec" target="_blank" rel="noopener"><img src="https://i.imgur.com/nYYxcDH.jpg" alt="교회관리앱 바로가기" /><span class="gallery-caption">교회관리앱</span></a>
           <button class="gallery-item" type="button" data-full="assets/online-seminar.png" data-title="온라인 세미나"><img src="assets/online-seminar.png" alt="온라인 세미나 안내 이미지" /><span class="gallery-caption">온라인 세미나</span></button>
         </div>
       </section>
@@ -992,6 +992,7 @@
 
     function bindGallery() {
       document.querySelectorAll(".gallery-item, .brand-image-button").forEach((item) => {
+        if (!item.dataset.full) return;
         item.addEventListener("click", () => openModal(item.dataset.full, item.dataset.title));
       });
     }
