@@ -72,8 +72,8 @@
 
     .hero {
       position: relative;
-      min-height: 640px;
-      padding: 34px 22px 28px;
+      min-height: 560px;
+      padding: 28px 22px 26px;
       color: #fff;
       background:
         linear-gradient(150deg, rgba(20, 36, 58, 0.96), rgba(30, 54, 85, 0.94) 54%, rgba(47, 111, 104, 0.92)),
@@ -107,7 +107,7 @@
     .hero-inner {
       display: flex;
       flex-direction: column;
-      min-height: 578px;
+      min-height: 506px;
     }
 
     .slogan {
@@ -136,13 +136,13 @@
     }
 
     .profile-block {
-      margin-top: auto;
-      padding-top: 46px;
+      margin-top: 152px;
+      padding-top: 0;
     }
 
     .profile-image-wrap {
-      width: 124px;
-      height: 124px;
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
       padding: 5px;
       background: linear-gradient(135deg, #fff, var(--gold), rgba(255, 255, 255, 0.4));
@@ -160,8 +160,8 @@
     }
 
     .name {
-      margin: 22px 0 0;
-      font-size: 38px;
+      margin: 18px 0 0;
+      font-size: 36px;
       line-height: 1.1;
       font-weight: 850;
       letter-spacing: 0;
@@ -176,7 +176,7 @@
     }
 
     .role {
-      margin: 15px 0 0;
+      margin: 13px 0 0;
       max-width: 360px;
       color: rgba(255, 255, 255, 0.88);
       font-size: 16px;
@@ -188,7 +188,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 22px;
+      margin-top: 18px;
     }
 
     .tag {
@@ -673,10 +673,21 @@
 
     @media (max-width: 360px) {
       .hero {
+        min-height: 530px;
         padding-left: 18px;
         padding-right: 18px;
       }
+      .hero-inner { min-height: 476px; }
+      .profile-block { margin-top: 128px; }
+      .profile-image-wrap {
+        width: 104px;
+        height: 104px;
+      }
       .name { font-size: 34px; }
+      .tag {
+        padding: 7px 10px;
+        font-size: 11px;
+      }
       .quick-grid { grid-template-columns: 1fr; }
       .quick-button.primary { grid-column: span 1; }
       .brand-actions { grid-template-columns: 1fr; }
