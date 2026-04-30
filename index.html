@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#14243a" />
+  <meta name="description" content="목회AI연구소 백형진 소장 디지털 명함" />
+  <meta property="og:title" content="목회AI연구소 | 백형진 소장" />
+  <meta property="og:description" content="목회 현장에 AI를 실제적으로 연결하는 강의, 세미나, 컨설팅 안내" />
+  <meta property="og:image" content="https://i.imgur.com/MVXslJ2.jpg" />
+  <title>목회AI연구소 | 백형진 소장</title>
+  <style>
+    :root {
+      --navy: #14243a;
+      --navy-2: #1e3655;
+      --ink: #172033;
+      --muted: #657184;
+      --line: rgba(20, 36, 58, 0.12);
+      --paper: #f6f8fb;
+      --card: rgba(255, 255, 255, 0.92);
+      --gold: #c9a76a;
+      --gold-2: #ead9ad;
+      --green: #2f6f68;
+      --shadow: 0 18px 46px rgba(20, 36, 58, 0.16);
+      --soft-shadow: 0 10px 28px rgba(20, 36, 58, 0.10);
+      --radius: 22px;
+      --bottom-cta-height: 76px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 4%, rgba(201, 167, 106, 0.16), transparent 32%),
+        linear-gradient(180deg, #eef3f8 0%, #f8fafc 38%, #f3f6f9 100%);
+      line-height: 1.58;
+      letter-spacing: 0;
+      padding-bottom: calc(var(--bottom-cta-height) + env(safe-area-inset-bottom));
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .page {
+      width: min(100%, 520px);
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 640px;
+      padding: 34px 22px 28px;
+      color: #fff;
+      background:
+        linear-gradient(150deg, rgba(20, 36, 58, 0.96), rgba(30, 54, 85, 0.94) 54%, rgba(47, 111, 104, 0.92)),
+        url("https://i.imgur.com/BpWlzkP.jpg") center / cover;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 78% 12%, rgba(234, 217, 173, 0.28), transparent 26%),
+        linear-gradient(180deg, rgba(20, 36, 58, 0.10), rgba(20, 36, 58, 0.72));
+      z-index: -1;
+    }
+
+    .hero::after {
+      content: "†";
+      position: absolute;
+      right: -18px;
+      top: 42px;
+      color: rgba(255, 255, 255, 0.075);
+      font-family: Georgia, serif;
+      font-size: 220px;
+      line-height: 1;
+      z-index: -1;
+      transform: rotate(-8deg);
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      min-height: 578px;
+    }
+
+    .slogan {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 13px;
+      border: 1px solid rgba(234, 217, 173, 0.42);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(14px);
+      color: #f7ecd0;
+      font-size: 13px;
+      font-weight: 700;
+      word-break: keep-all;
+    }
+
+    .slogan-mark {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-2);
+      box-shadow: 0 0 0 6px rgba(234, 217, 173, 0.14);
+      flex: 0 0 auto;
+    }
+
+    .profile-block {
+      margin-top: auto;
+      padding-top: 46px;
+    }
+
+    .profile-image-wrap {
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(135deg, #fff, var(--gold), rgba(255, 255, 255, 0.4));
+      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.28);
+    }
+
+    .profile-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(20, 36, 58, 0.8);
+      background: #d8dee8;
+    }
+
+    .name {
+      margin: 22px 0 0;
+      font-size: 38px;
+      line-height: 1.1;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .eng-name {
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+    }
+
+    .role {
+      margin: 15px 0 0;
+      max-width: 360px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 16px;
+      font-weight: 600;
+      word-break: keep-all;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.91);
+      font-size: 12px;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+
+    main { padding: 18px 16px 28px; }
+    .section {
+      margin-top: 16px;
+      padding: 22px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 18px;
+      line-height: 1.25;
+      color: var(--navy);
+      font-weight: 850;
+    }
+
+    .section-subtitle {
+      margin: -4px 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+      word-break: keep-all;
+    }
+
+    .intro-text {
+      margin: 0;
+      color: #2d3748;
+      font-size: 15px;
+      word-break: keep-all;
+    }
+
+    .intro-text + .intro-text { margin-top: 12px; }
+    .info-list { display: grid; gap: 10px; }
+    .info-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: center;
+      min-height: 62px;
+      padding: 12px;
+      border: 1px solid rgba(20, 36, 58, 0.08);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .icon-box {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, rgba(20, 36, 58, 0.08), rgba(201, 167, 106, 0.16));
+      color: var(--navy);
+    }
+
+    .icon-box svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+    }
+
+    .info-label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .info-value {
+      display: block;
+      margin-top: 2px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 720;
+      overflow-wrap: anywhere;
+    }
+
+    .detail-pills {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .detail-pill {
+      padding: 13px 14px;
+      border-radius: 17px;
+      background: linear-gradient(135deg, rgba(47, 111, 104, 0.08), rgba(201, 167, 106, 0.10));
+      border: 1px solid rgba(20, 36, 58, 0.08);
+      font-size: 13px;
+      color: #344054;
+      word-break: keep-all;
+    }
+
+    .detail-pill strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 11px;
+    }
+
+    .service-card {
+      position: relative;
+      padding: 17px 15px 16px;
+      border: 1px solid rgba(20, 36, 58, 0.09);
+      border-radius: 19px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 4px;
+      height: 38px;
+      border-radius: 0 999px 999px 0;
+      background: linear-gradient(180deg, var(--gold), var(--green));
+    }
+
+    .service-card h3 {
+      margin: 0 0 7px;
+      padding-left: 4px;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.35;
+      font-weight: 850;
+      word-break: keep-all;
+    }
+
+    .service-card p {
+      margin: 0;
+      padding-left: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      word-break: keep-all;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .quick-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 13px 10px;
+      border: 0;
+      border-radius: 17px;
+      background: #fff;
+      color: var(--navy);
+      box-shadow: inset 0 0 0 1px rgba(20, 36, 58, 0.10);
+      font-size: 13px;
+      font-weight: 820;
+      cursor: pointer;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    .quick-button.primary {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(20, 36, 58, 0.22);
+    }
+
+    .quick-button.accent {
+      background: linear-gradient(135deg, #f9edc8, #fff8e9);
+      color: #463917;
+    }
+
+    .quick-button svg {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .guide-box {
+      padding: 18px 16px;
+      border-radius: 20px;
+      background:
+        linear-gradient(145deg, rgba(20, 36, 58, 0.96), rgba(30, 54, 85, 0.92)),
+        radial-gradient(circle at top right, rgba(201, 167, 106, 0.22), transparent 38%);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .guide-box p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 14px;
+      word-break: keep-all;
+    }
+
+    .guide-points {
+      display: grid;
+      gap: 9px;
+      margin-top: 14px;
+    }
+
+    .guide-point {
+      padding: 12px 13px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.88);
+      word-break: keep-all;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      min-height: 148px;
+      border: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #dce4ee;
+      box-shadow: inset 0 0 0 1px rgba(20, 36, 58, 0.08);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 148px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:active img,
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 8px 8px;
+      padding: 8px 9px;
+      border-radius: 13px;
+      background: rgba(20, 36, 58, 0.78);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 750;
+      backdrop-filter: blur(12px);
+      text-align: left;
+    }
+
+    .copy-toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(var(--bottom-cta-height) + 18px + env(safe-area-inset-bottom));
+      transform: translateX(-50%) translateY(20px);
+      z-index: 50;
+      padding: 11px 15px;
+      border-radius: 999px;
+      background: rgba(20, 36, 58, 0.94);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 760;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 16px 34px rgba(20, 36, 58, 0.28);
+      white-space: nowrap;
+    }
+
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(7, 13, 22, 0.78);
+      backdrop-filter: blur(10px);
+    }
+
+    .modal.open { display: flex; }
+    .modal-content {
+      position: relative;
+      width: min(100%, 680px);
+      max-height: 86vh;
+    }
+
+    .modal-image {
+      display: block;
+      width: 100%;
+      max-height: 78vh;
+      object-fit: contain;
+      border-radius: 18px;
+      background: #111827;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+    }
+
+    .modal-title {
+      margin-top: 10px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+      text-align: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: -4px;
+      top: -48px;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .footer {
+      padding: 20px 18px 30px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .bottom-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(248, 250, 252, 0.82);
+      border-top: 1px solid rgba(20, 36, 58, 0.10);
+      backdrop-filter: blur(18px);
+    }
+
+    .bottom-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 492px);
+      min-height: 56px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #17243a, #2f6f68);
+      color: #fff;
+      box-shadow: 0 16px 36px rgba(20, 36, 58, 0.28);
+      font-size: 15px;
+      font-weight: 850;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    @media (min-width: 521px) {
+      body { padding-top: 18px; }
+      .page {
+        border-radius: 30px;
+        box-shadow: 0 26px 80px rgba(20, 36, 58, 0.16);
+      }
+      .service-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 360px) {
+      .hero {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+      .name { font-size: 34px; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .quick-button.primary { grid-column: span 1; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item img { height: 176px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="slogan"><span class="slogan-mark"></span>AI를 통해 목회의 혁신하다.</div>
+        <div class="profile-block">
+          <div class="profile-image-wrap">
+            <img class="profile-image" src="https://i.imgur.com/MVXslJ2.jpg" alt="백형진 프로필 사진" />
+          </div>
+          <h1 class="name">백형진</h1>
+          <div class="eng-name">BAEKHYUNGJIN</div>
+          <p class="role">목회AI연구소 소장 / 하베스트 교수</p>
+          <div class="tags" aria-label="핵심 키워드">
+            <span class="tag">목회 AI 활용</span>
+            <span class="tag">설교 준비 자동화</span>
+            <span class="tag">교회 콘텐츠 제작</span>
+            <span class="tag">업무 자동화</span>
+            <span class="tag">AI 교육·컨설팅</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="intro">
+        <h2 class="section-title">소개</h2>
+        <p class="intro-text">백형진 소장은 목회 현장에 AI를 실제적으로 접목하여 설교 준비, 교육 콘텐츠 제작, 교회 행정, 이미지·영상 콘텐츠 제작을 돕는 목회 AI 활용 전문가입니다.</p>
+        <p class="intro-text">목회AI연구소를 운영하며 목회자와 교회를 위한 AI 활용법을 연구하고 교육하고 있습니다. ChatGPT, Claude, Gemini, NotebookLM, Canva, Google Workspace, Apps Script, 웹앱 제작 도구를 목회 현장에 맞게 연결해 사역에 바로 적용할 수 있는 실행 방법을 안내합니다.</p>
+        <p class="intro-text">AI를 단순한 기술이 아니라 목회자의 사고를 정리하고 반복 업무를 줄이며, 말씀 사역과 성도 돌봄에 더 집중하도록 돕는 보조 도구로 바라봅니다.</p>
+      </section>
+
+      <section class="section" id="info">
+        <h2 class="section-title">기본 정보</h2>
+        <div class="info-list">
+          <a class="info-item" href="tel:01044160926">
+            <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.32 1.8.59 2.65a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6.27 6.27l1.25-1.25a2 2 0 0 1 2.11-.45c.85.27 1.74.47 2.65.59A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <span><span class="info-label">전화</span><span class="info-value">010-4416-0926</span></span>
+          </a>
+          <a class="info-item" href="https://open.kakao.com/o/smi51Hqi" target="_blank" rel="noopener">
+            <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.3 9.6 9.6 0 0 1-3.78-.76L3 21l1.42-4.27A8.1 8.1 0 0 1 3 11.5C3 6.8 7.03 3 12 3s9 3.8 9 8.5Z"/></svg></span>
+            <span><span class="info-label">카카오톡 상담</span><span class="info-value">오픈채팅으로 연결</span></span>
+          </a>
+          <a class="info-item" href="mailto:backhung65@gmail.com">
+            <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 6-10 7L2 6"/></svg></span>
+            <span><span class="info-label">이메일</span><span class="info-value">backhung65@gmail.com</span></span>
+          </a>
+          <div class="info-item">
+            <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-8h6v8"/></svg></span>
+            <span><span class="info-label">소속</span><span class="info-value">목회AI연구소 / 하베스트선교대학</span></span>
+          </div>
+          <a class="info-item" href="https://sunminchurch.my.canva.site/ai" target="_blank" rel="noopener">
+            <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20"/><path d="M12 2a15.3 15.3 0 0 0 0 20"/></svg></span>
+            <span><span class="info-label">홈페이지</span><span class="info-value">sunminchurch.my.canva.site/ai</span></span>
+          </a>
+        </div>
+        <div class="detail-pills">
+          <div class="detail-pill"><strong>강의 가능 분야</strong>목회 AI 활용, 설교 준비 자동화, 교회 콘텐츠 제작, Canva 활용, Google Workspace 활용, AI 기반 홈페이지 및 웹앱 구성</div>
+          <div class="detail-pill"><strong>주요 대상</strong>목회자, 사모, 교회 교역자, 교회학교 교사, 선교단체, 기독교 콘텐츠 제작자</div>
+          <div class="detail-pill"><strong>활동 형태</strong>온라인 세미나, 오프라인 강의, 교회 맞춤 컨설팅, GPTs/Gems 설계, AI 도구 실습 교육</div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <h2 class="section-title">전문 분야</h2>
+        <div class="service-grid">
+          <article class="service-card"><h3>LLM의 목회적 활용</h3><p>ChatGPT, Claude, Gemini를 목회자의 판단과 책임 아래 사역에 연결합니다.</p></article>
+          <article class="service-card"><h3>교회 이미지·홍보물 제작</h3><p>Canva를 활용해 카드뉴스, 전도지, 교회 홍보 이미지를 실습 중심으로 제작합니다.</p></article>
+          <article class="service-card"><h3>교회 업무 자동화</h3><p>Google Workspace, Apps Script, 웹앱을 활용해 반복 행정 업무를 줄이는 시스템을 설계합니다.</p></article>
+          <article class="service-card"><h3>콘텐츠 제작 시스템 설계</h3><p>설교 준비, 성경공부 교재, 쇼츠 콘텐츠 제작 과정을 AI 기반 워크플로로 정리합니다.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="quick">
+        <h2 class="section-title">빠른 연결</h2>
+        <div class="quick-grid">
+          <a class="quick-button primary" href="https://open.kakao.com/o/smi51Hqi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.3 9.6 9.6 0 0 1-3.78-.76L3 21l1.42-4.27A8.1 8.1 0 0 1 3 11.5C3 6.8 7.03 3 12 3s9 3.8 9 8.5Z"/></svg>상담 연결하기</a>
+          <a class="quick-button" href="tel:01044160926"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.32 1.8.59 2.65a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6.27 6.27l1.25-1.25a2 2 0 0 1 2.11-.45c.85.27 1.74.47 2.65.59A2 2 0 0 1 22 16.92Z"/></svg>전화 걸기</a>
+          <a class="quick-button" href="sms:01044160926"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/></svg>문자 보내기</a>
+          <a class="quick-button accent" href="https://sunminchurch.my.canva.site/ai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>홈페이지 방문</a>
+          <button class="quick-button" type="button" onclick="copyContact()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>연락처 복사</button>
+          <button class="quick-button" type="button" onclick="downloadVCard()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>vCard 저장</button>
+        </div>
+      </section>
+
+      <section class="section" id="guide">
+        <h2 class="section-title">상담 및 활동 안내</h2>
+        <div class="guide-box">
+          <p>교회 상황과 사역자의 필요에 맞추어 AI를 어떻게 목회적으로 활용할 수 있을지 함께 진단하고, 실제 적용 가능한 도구와 실행 방법을 안내해드립니다.</p>
+          <div class="guide-points">
+            <div class="guide-point">설교 준비와 성경공부 교재 제작 과정을 정리하고, 목회자의 언어와 신학적 방향에 맞는 프롬프트를 설계합니다.</div>
+            <div class="guide-point">교회 홍보 이미지, 카드뉴스, 전도지, 유튜브 쇼츠 등 콘텐츠 제작 흐름을 실습 가능한 방식으로 구축합니다.</div>
+            <div class="guide-point">교회 행정과 반복 업무를 줄일 수 있도록 Google Workspace, Apps Script, 웹앱 기반의 자동화 방향을 제안합니다.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <h2 class="section-title">강연 및 사역 현장</h2>
+        <p class="section-subtitle">강의, 세미나, 목회 AI 교육과 실제 적용 사례를 담은 활동 이미지입니다.</p>
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-full="https://i.imgur.com/BpWlzkP.jpg" data-title="오프라인 세미나"><img src="https://i.imgur.com/BpWlzkP.jpg" alt="오프라인 세미나" /><span class="gallery-caption">오프라인 세미나</span></button>
+          <button class="gallery-item" type="button" data-full="https://i.imgur.com/1vUVbIE.jpg" data-title="목회자대회"><img src="https://i.imgur.com/1vUVbIE.jpg" alt="목회자대회" /><span class="gallery-caption">목회자대회</span></button>
+          <button class="gallery-item" type="button" data-full="https://i.imgur.com/nYYxcDH.jpg" data-title="교회관리앱 포트폴리오"><img src="https://i.imgur.com/nYYxcDH.jpg" alt="교회관리앱 포트폴리오" /><span class="gallery-caption">교회관리앱</span></button>
+          <button class="gallery-item" type="button" data-full="https://i.imgur.com/MVXslJ2.jpg" data-title="프로필 이미지"><img src="https://i.imgur.com/MVXslJ2.jpg" alt="백형진 프로필 이미지" /><span class="gallery-caption">프로필 이미지</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Digital Business Card · BAEKHYUNGJIN<br />
+      목회AI연구소 | 백형진 소장
+    </footer>
+  </div>
+
+  <div class="bottom-cta">
+    <a href="https://open.kakao.com/o/smi51Hqi" target="_blank" rel="noopener">우리 교회에 맞는 AI 활용법이 궁금하시다면 지금 상담을 신청해보세요.</a>
+  </div>
+
+  <div class="copy-toast" id="copyToast" role="status" aria-live="polite">연락처가 복사되었습니다.</div>
+  <div class="modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="이미지 확대 보기">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="닫기" onclick="closeModal()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <img class="modal-image" id="modalImage" src="" alt="" />
+      <div class="modal-title" id="modalTitle"></div>
+    </div>
+  </div>
+
+  <script>
+    const contact = {
+      name: "백형진",
+      englishName: "BAEKHYUNGJIN",
+      title: "목회AI연구소 소장 / 하베스트 교수",
+      organization: "목회AI연구소 / 하베스트선교대학",
+      phone: "010-4416-0926",
+      email: "backhung65@gmail.com",
+      website: "https://sunminchurch.my.canva.site/ai",
+      kakao: "https://open.kakao.com/o/smi51Hqi"
+    };
+
+    function showToast(message) {
+      const toast = document.getElementById("copyToast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function fallbackCopy(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        const successful = document.execCommand("copy");
+        showToast(successful ? "연락처가 복사되었습니다." : "복사할 내용을 선택해 주세요.");
+      } catch (error) {
+        showToast("복사 기능을 사용할 수 없습니다.");
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+
+    async function copyContact() {
+      const text = [
+        `${contact.organization}`,
+        `${contact.name} ${contact.title}`,
+        `전화: ${contact.phone}`,
+        `이메일: ${contact.email}`,
+        `홈페이지: ${contact.website}`,
+        `상담 링크: ${contact.kakao}`
+      ].join("\n");
+
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast("연락처가 복사되었습니다.");
+        } catch (error) {
+          fallbackCopy(text);
+        }
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function downloadVCard() {
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:백;형진;;;",
+        "FN:백형진",
+        "ORG:목회AI연구소;하베스트선교대학",
+        "TITLE:목회AI연구소 소장 / 하베스트 교수",
+        "TEL;TYPE=CELL:01044160926",
+        "EMAIL;TYPE=INTERNET:backhung65@gmail.com",
+        "URL:https://sunminchurch.my.canva.site/ai",
+        "NOTE:목회 AI 활용, 설교 준비 자동화, 교회 콘텐츠 제작, 교회 업무 자동화 상담",
+        "END:VCARD"
+      ].join("\n");
+
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "baekhyungjin.vcf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast("vCard 파일을 저장합니다.");
+    }
+
+    function openModal(imageUrl, title) {
+      const modal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      modalImage.src = imageUrl;
+      modalImage.alt = title;
+      modalTitle.textContent = title;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("imageModal");
+      const modalImage = document.getElementById("modalImage");
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      modalImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    function bindGallery() {
+      document.querySelectorAll(".gallery-item").forEach((item) => {
+        item.addEventListener("click", () => openModal(item.dataset.full, item.dataset.title));
+      });
+    }
+
+    function bindModalClose() {
+      const modal = document.getElementById("imageModal");
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("open")) closeModal();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      bindGallery();
+      bindModalClose();
+    });
+  </script>
+</body>
+</html>
