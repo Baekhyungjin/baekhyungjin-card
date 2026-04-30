@@ -402,6 +402,87 @@
       word-break: keep-all;
     }
 
+    .brand-showcase {
+      display: grid;
+      gap: 14px;
+    }
+
+    .brand-card {
+      overflow: hidden;
+      border: 1px solid rgba(20, 36, 58, 0.10);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+    }
+
+    .brand-image-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: #0f172a;
+      cursor: pointer;
+    }
+
+    .brand-image-button img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 360px;
+      object-fit: cover;
+    }
+
+    .brand-card.portrait .brand-image-button img {
+      max-height: 430px;
+      object-position: center top;
+    }
+
+    .brand-body {
+      padding: 15px;
+    }
+
+    .brand-body h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.35;
+      font-weight: 850;
+      word-break: keep-all;
+    }
+
+    .brand-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      word-break: keep-all;
+    }
+
+    .brand-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .brand-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      border: 0;
+      border-radius: 14px;
+      background: rgba(20, 36, 58, 0.07);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 820;
+      cursor: pointer;
+    }
+
+    .brand-action.primary {
+      background: linear-gradient(135deg, var(--navy), var(--green));
+      color: #fff;
+    }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -589,6 +670,7 @@
       .name { font-size: 34px; }
       .quick-grid { grid-template-columns: 1fr; }
       .quick-button.primary { grid-column: span 1; }
+      .brand-actions { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
       .gallery-item.business-card { grid-column: span 1; }
       .gallery-item img { height: 176px; }
@@ -692,10 +774,46 @@
         </div>
       </section>
 
+      <section class="section" id="brand-assets">
+        <h2 class="section-title">AI 프로필 브랜딩 이미지</h2>
+        <p class="section-subtitle">강의 안내, 상담 링크 공유, 모바일 명함 전달에 함께 활용할 수 있는 대표 이미지입니다.</p>
+        <div class="brand-showcase">
+          <article class="brand-card">
+            <button class="brand-image-button" type="button" data-full="assets/ai-glass-card.png" data-title="투명 글래스형 디지털 명함">
+              <img src="assets/ai-glass-card.png" alt="투명 글래스형 디지털 명함 이미지" />
+            </button>
+            <div class="brand-body">
+              <h3>투명 글래스형 디지털 명함</h3>
+              <p>상담 링크나 강의 안내 메시지와 함께 공유하기 좋은 고급형 명함 이미지입니다.</p>
+              <div class="brand-actions">
+                <button class="brand-action primary" type="button" onclick="openModal('assets/ai-glass-card.png', '투명 글래스형 디지털 명함')">크게 보기</button>
+                <a class="brand-action" href="assets/ai-glass-card.png" download="baekhyungjin-ai-glass-card.png">이미지 저장</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card portrait">
+            <button class="brand-image-button" type="button" data-full="assets/ai-profile-poster.png" data-title="AI 목회 프로필 포스터">
+              <img src="assets/ai-profile-poster.png" alt="AI 목회 프로필 포스터 이미지" />
+            </button>
+            <div class="brand-body">
+              <h3>AI 목회 프로필 포스터</h3>
+              <p>세미나 소개, 강의 제안서, SNS 홍보 이미지로 활용하기 좋은 세로형 프로필 자료입니다.</p>
+              <div class="brand-actions">
+                <button class="brand-action primary" type="button" onclick="openModal('assets/ai-profile-poster.png', 'AI 목회 프로필 포스터')">크게 보기</button>
+                <a class="brand-action" href="assets/ai-profile-poster.png" download="baekhyungjin-ai-profile-poster.png">이미지 저장</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section" id="gallery">
         <h2 class="section-title">강연 및 사역 현장</h2>
         <p class="section-subtitle">강의, 세미나, 목회 AI 교육과 실제 적용 사례를 담은 활동 이미지입니다.</p>
         <div class="gallery-grid">
+          <button class="gallery-item business-card" type="button" data-full="assets/ai-glass-card.png" data-title="투명 글래스형 디지털 명함"><img src="assets/ai-glass-card.png" alt="투명 글래스형 디지털 명함" /><span class="gallery-caption">디지털 명함</span></button>
+          <button class="gallery-item business-card" type="button" data-full="assets/ai-profile-poster.png" data-title="AI 목회 프로필 포스터"><img src="assets/ai-profile-poster.png" alt="AI 목회 프로필 포스터" /><span class="gallery-caption">프로필 포스터</span></button>
           <button class="gallery-item" type="button" data-full="https://i.imgur.com/XfX4LvT.jpg" data-title="프로필 이미지"><img src="https://i.imgur.com/XfX4LvT.jpg" alt="백형진 프로필 이미지" /><span class="gallery-caption">프로필 이미지</span></button>
           <button class="gallery-item business-card" type="button" data-full="https://i.imgur.com/6eGgQKD.jpg" data-title="목회AI연구소 명함"><img src="https://i.imgur.com/6eGgQKD.jpg" alt="목회AI연구소 명함 이미지" /><span class="gallery-caption">명함 이미지</span></button>
           <button class="gallery-item" type="button" data-full="https://i.imgur.com/BpWlzkP.jpg" data-title="오프라인 세미나"><img src="https://i.imgur.com/BpWlzkP.jpg" alt="오프라인 세미나" /><span class="gallery-caption">오프라인 세미나</span></button>
@@ -833,7 +951,7 @@
     }
 
     function bindGallery() {
-      document.querySelectorAll(".gallery-item").forEach((item) => {
+      document.querySelectorAll(".gallery-item, .brand-image-button").forEach((item) => {
         item.addEventListener("click", () => openModal(item.dataset.full, item.dataset.title));
       });
     }
