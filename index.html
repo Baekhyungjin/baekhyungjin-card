@@ -72,8 +72,8 @@
 
     .hero {
       position: relative;
-      min-height: 560px;
-      padding: 28px 22px 26px;
+      min-height: 334px;
+      padding: 28px 22px 22px;
       color: #fff;
       background:
         linear-gradient(150deg, rgba(20, 36, 58, 0.96), rgba(30, 54, 85, 0.94) 54%, rgba(47, 111, 104, 0.92)),
@@ -107,7 +107,7 @@
     .hero-inner {
       display: flex;
       flex-direction: column;
-      min-height: 506px;
+      min-height: 284px;
     }
 
     .slogan {
@@ -136,17 +136,26 @@
     }
 
     .profile-block {
-      margin-top: 152px;
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      column-gap: 18px;
+      row-gap: 18px;
+      align-items: center;
+      margin-top: 30px;
       padding-top: 0;
     }
 
     .profile-image-wrap {
-      width: 112px;
-      height: 112px;
+      width: 104px;
+      height: 104px;
       border-radius: 50%;
       padding: 5px;
       background: linear-gradient(135deg, #fff, var(--gold), rgba(255, 255, 255, 0.4));
       box-shadow: 0 22px 56px rgba(0, 0, 0, 0.28);
+    }
+
+    .profile-text {
+      min-width: 0;
     }
 
     .profile-image {
@@ -160,7 +169,7 @@
     }
 
     .name {
-      margin: 18px 0 0;
+      margin: 0;
       font-size: 36px;
       line-height: 1.1;
       font-weight: 850;
@@ -185,19 +194,20 @@
     }
 
     .tags {
+      grid-column: 1 / -1;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 18px;
+      margin-top: 0;
     }
 
     .tag {
-      padding: 8px 11px;
+      padding: 7px 10px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.18);
       color: rgba(255, 255, 255, 0.91);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       backdrop-filter: blur(10px);
     }
@@ -673,17 +683,30 @@
 
     @media (max-width: 360px) {
       .hero {
-        min-height: 530px;
+        min-height: 336px;
         padding-left: 18px;
         padding-right: 18px;
       }
-      .hero-inner { min-height: 476px; }
-      .profile-block { margin-top: 128px; }
-      .profile-image-wrap {
-        width: 104px;
-        height: 104px;
+      .hero-inner { min-height: 286px; }
+      .profile-block {
+        grid-template-columns: 88px 1fr;
+        column-gap: 14px;
+        row-gap: 16px;
+        margin-top: 28px;
       }
-      .name { font-size: 34px; }
+      .profile-image-wrap {
+        width: 88px;
+        height: 88px;
+      }
+      .name { font-size: 30px; }
+      .eng-name {
+        margin-top: 6px;
+        font-size: 11px;
+      }
+      .role {
+        margin-top: 10px;
+        font-size: 14px;
+      }
       .tag {
         padding: 7px 10px;
         font-size: 11px;
@@ -705,9 +728,11 @@
           <div class="profile-image-wrap">
             <img class="profile-image" src="https://i.imgur.com/XfX4LvT.jpg" alt="백형진 프로필 사진" />
           </div>
-          <h1 class="name">백형진</h1>
-          <div class="eng-name">BAEKHYUNGJIN</div>
-          <p class="role">목회AI연구소 소장 / 하베스트 교수</p>
+          <div class="profile-text">
+            <h1 class="name">백형진</h1>
+            <div class="eng-name">BAEKHYUNGJIN</div>
+            <p class="role">목회AI연구소 소장 / 하베스트 교수</p>
+          </div>
           <div class="tags" aria-label="핵심 키워드">
             <span class="tag">목회 AI 활용</span>
             <span class="tag">설교 준비 자동화</span>
