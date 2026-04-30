@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="목회AI연구소">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14243a"/>
+      <stop offset="0.58" stop-color="#1e3655"/>
+      <stop offset="1" stop-color="#2f6f68"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="16" y1="12" x2="48" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7ecd0"/>
+      <stop offset="1" stop-color="#c9a76a"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#bg)"/>
+  <path d="M32 13v38M22 23h20" stroke="url(#shine)" stroke-width="4.8" stroke-linecap="round"/>
+  <path d="M20 48c5.8-5.2 18.2-5.2 24 0" fill="none" stroke="#f7ecd0" stroke-width="3.2" stroke-linecap="round" opacity=".86"/>
+  <circle cx="49" cy="15" r="3" fill="#ead9ad"/>
+</svg>
